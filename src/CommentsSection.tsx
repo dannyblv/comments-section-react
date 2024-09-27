@@ -22,7 +22,7 @@ export default ({threadId}: IProps) => {
   }, [threadId]);
   
   return (
-    <div id="commentsSection">
+    <div id="commentsSection" data-testid="commentsSection">
       <noscript>Please enable Javascript.</noscript>
     </div>
   );
