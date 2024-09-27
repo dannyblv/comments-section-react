@@ -1,11 +1,14 @@
 {
-  "name": "react-comments-section",
+  "name": "comments-section-react",
   "license": "ISC",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "commentssection.site <support@commentssection.site>",
   "description": "React component to render a comments section using commentssection.site",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc",
@@ -26,5 +29,8 @@
     "jest-environment-jsdom": "^29.7.0",
     "ts-jest": "^29.2.5",
     "typescript": "^5.6.2"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
