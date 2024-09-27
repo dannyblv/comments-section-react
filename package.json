@@ -1,0 +1,23 @@
+{
+  "name": "react-comments-section",
+  "license": "ISC",
+  "version": "1.0.0",
+  "author": "commentssection.site <support@commentssection.site>",
+  "description": "React component to implement commentssection.site",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.9",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.6.2"
+  }
+}
