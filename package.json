@@ -1,11 +1,11 @@
 {
   "name": "comments-section-react",
   "license": "ISC",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "author": "commentssection.site <support@commentssection.site>",
   "description": "React component to render a comments section using commentssection.site",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/CommentsSection.js",
+  "types": "dist/CommentsSection.d.ts",
   "files": [
     "dist"
   ],
