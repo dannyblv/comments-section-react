@@ -1,7 +1,7 @@
 {
   "name": "comments-section-react",
   "license": "ISC",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "author": "commentssection.site <support@commentssection.site>",
   "description": "React component to render a comments section using commentssection.site",
   "main": "dist/CommentsSection.js",
@@ -32,5 +32,9 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dannyblv/comments-section-react.git"
   }
 }
