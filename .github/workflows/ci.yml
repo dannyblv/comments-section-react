@@ -27,9 +27,3 @@ jobs:
       - name: Build project
         if: success()
         run: npm run build
-
-      - name: Update /dist folder
-        if: success()
-        run: |
-          mkdir -p dist
-          cp -r dist/* /dist/
