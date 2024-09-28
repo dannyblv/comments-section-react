@@ -19,9 +19,9 @@ describe('CommentsSection React Component', () => {
     expect(scriptElement.src).toBe(`https://www.commentssection.site/embed.js?threadId=${threadId}`);
   });
 
-  test('should render a div with id "commentsSection-${threadId}"', () => {
+  test('should render a div with id "commentsSection"', () => {
     render(<CommentsSection threadId={threadId} />);
-    const divElement = screen.getByTestId(`commentsSection-${threadId}`);
+    const divElement = screen.getByTestId('commentsSection');
     expect(divElement).toBeInTheDocument();
   });
 

@@ -10,8 +10,6 @@ interface IProps {
 };
 
 export default ({threadId}: IProps) => {
-  const ID = `commentsSection-${threadId}`;
-  
   useEffect(() => {
     const script = document.createElement('script');
     script.src = `https://www.commentssection.site/embed.js?threadId=${threadId}`;
@@ -29,7 +27,7 @@ export default ({threadId}: IProps) => {
   }
 
   return (
-    <div id={ID} data-testid={ID}>
+    <div id="commentsSection" data-testid="commentsSection">
       <noscript>Please enable Javascript.</noscript>
     </div>
   );
