@@ -6,5 +6,5 @@ interface IProps {
     */
     threadId: string;
 }
-declare const _default: ({ threadId }: IProps) => React.JSX.Element;
+declare const _default: ({ threadId }: IProps) => React.JSX.Element | null;
 export default _default;
