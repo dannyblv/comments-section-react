@@ -11,5 +11,5 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": ["src/CommentsSection.tsx"]
+  "include": ["src/CommentsSection.tsx", "src/CommentsSection.test.tsx"]
 }

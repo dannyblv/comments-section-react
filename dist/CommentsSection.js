@@ -28,6 +28,10 @@ var react_1 = __importStar(require("react"));
 ;
 exports.default = (function (_a) {
     var threadId = _a.threadId;
+    if (!threadId) {
+        throw new Error('CommentsSection: threadId is required');
+    }
+    var ID = "commentsSection-".concat(threadId);
     (0, react_1.useEffect)(function () {
         var script = document.createElement('script');
         script.src = "https://www.commentssection.site/embed.js?threadId=".concat(threadId);
@@ -37,6 +41,6 @@ exports.default = (function (_a) {
             document.head.removeChild(script);
         };
     }, [threadId]);
-    return (react_1.default.createElement("div", { id: "commentsSection", "data-testid": "commentsSection" },
+    return (react_1.default.createElement("div", { id: ID, "data-testid": ID },
         react_1.default.createElement("noscript", null, "Please enable Javascript.")));
 });

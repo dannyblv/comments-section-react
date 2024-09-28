@@ -10,6 +10,8 @@ interface IProps {
 };
 
 export default ({threadId}: IProps) => {
+  const ID = `commentsSection-${threadId}`;
+  
   useEffect(() => {
     const script = document.createElement('script');
     script.src = `https://www.commentssection.site/embed.js?threadId=${threadId}`;
@@ -20,9 +22,14 @@ export default ({threadId}: IProps) => {
       document.head.removeChild(script);
     };
   }, [threadId]);
-  
+
+  if (!threadId) {
+    console.warn('CommentsSection was not rendered, threadId was not provided.');
+    return null;
+  }
+
   return (
-    <div id="commentsSection" data-testid="commentsSection">
+    <div id={ID} data-testid={ID}>
       <noscript>Please enable Javascript.</noscript>
     </div>
   );

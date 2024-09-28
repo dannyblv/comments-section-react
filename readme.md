@@ -35,16 +35,14 @@ Here is an example of how to use the `CommentsSection` component in your React a
 import React from 'react';
 import CommentsSection from 'comments-section-react';
 
-const App = () => {
-  const threadId = 'your-thread-id'; // Replace with your actual threadId
+const THREAD_ID = 'your-thread-id'; // Replace with your actual threadId
 
-  return (
-    <div>
-      <h1>Comments Section</h1>
-      <CommentsSection threadId={threadId} />
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <h1>Comments Section</h1>
+    <CommentsSection threadId={THREAD_ID} />
+  </div>
+);
 
 export default App;
 ```

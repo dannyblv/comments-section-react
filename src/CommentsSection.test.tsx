@@ -1,6 +1,5 @@
 import React from 'react';
-import {render, screen, cleanup} from '@testing-library/react';
-
+import { render, screen, cleanup, act } from '@testing-library/react';
 import CommentsSection from './CommentsSection';
 
 describe('CommentsSection React Component', () => {
@@ -20,9 +19,9 @@ describe('CommentsSection React Component', () => {
     expect(scriptElement.src).toBe(`https://www.commentssection.site/embed.js?threadId=${threadId}`);
   });
 
-  test('should render a div with id "commentsSection"', () => {
+  test('should render a div with id "commentsSection-${threadId}"', () => {
     render(<CommentsSection threadId={threadId} />);
-    const divElement = screen.getByTestId('commentsSection');
+    const divElement = screen.getByTestId(`commentsSection-${threadId}`);
     expect(divElement).toBeInTheDocument();
   });
 
@@ -40,5 +39,13 @@ describe('CommentsSection React Component', () => {
     render(<CommentsSection threadId={threadId} />);
     const noscriptElement = screen.getByText('Please enable Javascript.');
     expect(noscriptElement).toBeInTheDocument();
+  });
+
+  test('should log a warning and return null if threadId is falsy', () => {
+    const consoleWarnSpy = jest.spyOn(console, 'warn').mockImplementation(() => {});
+    const { container } = render(<CommentsSection threadId={undefined as any} />);
+    expect(consoleWarnSpy).toHaveBeenCalledWith('CommentsSection was not rendered, threadId was not provided.');
+    expect(container.firstChild).toBeNull();
+    consoleWarnSpy.mockRestore();
   });
 });
