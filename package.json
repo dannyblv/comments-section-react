@@ -1,7 +1,7 @@
 {
   "name": "comments-section-react",
   "license": "ISC",
-  "version": "1.4.1-stable",
+  "version": "1.4.2-stable",
   "author": "commentssection.site <support@commentssection.site>",
   "description": "React component to render a comments section using commentssection.site",
   "main": "dist/CommentsSection.js",

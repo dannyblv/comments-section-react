@@ -7,12 +7,13 @@ interface IProps {
    * This ID is provided to you in dashboard under the thread's section.
   */
   threadId: string;
+  isDevMode?: never;
 };
 
-export default ({threadId}: IProps) => {
+export default ({threadId, isDevMode}: IProps) => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://www.commentssection.site/embed.js?threadId=${threadId}`;
+    script.src = isDevMode ? `http://localhost:3000/embed.js?threadId=${threadId}` : `https://www.commentssection.site/embed.js?threadId=${threadId}`;
     script.async = true;
     document.head.appendChild(script);
 

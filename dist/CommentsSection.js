@@ -27,10 +27,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
 ;
 exports.default = (function (_a) {
-    var threadId = _a.threadId;
+    var threadId = _a.threadId, isDevMode = _a.isDevMode;
     (0, react_1.useEffect)(function () {
         var script = document.createElement('script');
-        script.src = "https://www.commentssection.site/embed.js?threadId=".concat(threadId);
+        script.src = isDevMode ? "http://localhost:3000/embed.js?threadId=".concat(threadId) : "https://www.commentssection.site/embed.js?threadId=".concat(threadId);
         script.async = true;
         document.head.appendChild(script);
         return function () {
