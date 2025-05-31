@@ -13,7 +13,7 @@ interface IProps {
 export default ({threadId, isDevMode}: IProps) => {
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = isDevMode ? `http://localhost:3000/embed.js?threadId=${threadId}` : `https://www.commentssection.site/embed.js?threadId=${threadId}`;
+    script.src = `https://www.${isDevMode ? 'cslab.io' : 'commentssection.site'}/embed.js?threadId=${threadId}`;
     script.async = true;
     document.head.appendChild(script);
 

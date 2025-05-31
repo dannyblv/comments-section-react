@@ -16,13 +16,23 @@ var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (
 }) : function(o, v) {
     o["default"] = v;
 });
-var __importStar = (this && this.__importStar) || function (mod) {
-    if (mod && mod.__esModule) return mod;
-    var result = {};
-    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
-    __setModuleDefault(result, mod);
-    return result;
-};
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 var react_1 = __importStar(require("react"));
 ;
@@ -30,7 +40,7 @@ exports.default = (function (_a) {
     var threadId = _a.threadId, isDevMode = _a.isDevMode;
     (0, react_1.useEffect)(function () {
         var script = document.createElement('script');
-        script.src = isDevMode ? "http://localhost:3000/embed.js?threadId=".concat(threadId) : "https://www.commentssection.site/embed.js?threadId=".concat(threadId);
+        script.src = "https://www.".concat(isDevMode ? 'cslab.io' : 'commentssection.site', "/embed.js?threadId=").concat(threadId);
         script.async = true;
         document.head.appendChild(script);
         return function () {
