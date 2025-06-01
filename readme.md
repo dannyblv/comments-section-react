@@ -47,6 +47,9 @@ const App = () => (
 export default App;
 ```
 
+You can also try a live example on [CodeSandbox](https://codesandbox.io/p/sandbox/comments-section-react-f5qn4h).  
+This sandbox also demonstrates how to override the component's styles via custom CSS.
+
 ### Props
 
 - `threadId` (string): The ID of the thread. This ID is provided to you in the dashboard under the thread's section.
