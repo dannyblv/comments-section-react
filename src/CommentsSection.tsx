@@ -7,12 +7,14 @@ interface IProps {
    * This ID is provided to you in dashboard under the thread's section.
   */
   threadId: string;
+  isDevMode?: boolean;
 };
 
-export default ({threadId}: IProps) => {
+export default ({threadId, isDevMode}: IProps) => {
+  const URL = isDevMode ? 'https://www.cslab.io' : 'https://www.commentssection.site';
   useEffect(() => {
     const script = document.createElement('script');
-    script.src = `https://www.commentssection.site/embed.js?threadId=${threadId}`;
+    script.src = `${URL}/embed.js?threadId=${threadId}`;
     script.async = true;
     document.head.appendChild(script);
 
