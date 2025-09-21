@@ -5,7 +5,7 @@ interface IProps {
      * This ID is provided to you in dashboard under the thread's section.
     */
     threadId: string;
-    isDevMode?: never;
+    isDevMode?: boolean;
 }
 declare const _default: ({ threadId, isDevMode }: IProps) => React.JSX.Element | null;
 export default _default;

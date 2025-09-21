@@ -38,9 +38,10 @@ var react_1 = __importStar(require("react"));
 ;
 exports.default = (function (_a) {
     var threadId = _a.threadId, isDevMode = _a.isDevMode;
+    var URL = isDevMode ? 'https://www.cslab.io' : 'https://www.commentssection.site';
     (0, react_1.useEffect)(function () {
         var script = document.createElement('script');
-        script.src = "https://www.".concat(isDevMode ? 'cslab.io' : 'commentssection.site', "/embed.js?threadId=").concat(threadId);
+        script.src = "".concat(URL, "/embed.js?threadId=").concat(threadId);
         script.async = true;
         document.head.appendChild(script);
         return function () {
